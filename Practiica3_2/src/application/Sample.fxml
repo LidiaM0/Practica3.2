@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+    <top>
+        <TextField fx:id="tiempoInput" promptText="introduce el tiempo en segundos" style="-fx-background-color: #fee3fa;" BorderPane.alignment="CENTER" />
+    </top>
+    <center>
+        <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+            <children>
+                <Circle fx:id="circulo" fill="#f2dcf5" layoutX="200.0" layoutY="188.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" style="-fx-background-color: #fee3fa;" />
+            </children>
+        </Pane>
+    </center>
+    <bottom>
+        <Label fx:id="tiempoRestanteLabel" style="-fx-background-color: #fee3fa;" text="tiempo restante: " BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>
