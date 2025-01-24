@@ -1,0 +1,31 @@
+<settings>
+    <servers>
+        <server>
+            <id>repo-snapshots</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+    </servers>
+    <mirrors>
+        <mirror>
+            <id>nexus</id>
+            <mirrorOf>*</mirrorOf>
+            <url>http://localhost:8081/repository/repo-group/</url>
+        </mirror>
+    </mirrors>
+    <profiles>
+        <profile>
+            <id>nexus</id>
+            <!-- Enable snapshots for the built-in central repo to direct -->
+            <!-- all requests to nexus via the mirror -->
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>http://localhost:8081/repository/repo-group/</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>true</enabled></snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+</settings>
